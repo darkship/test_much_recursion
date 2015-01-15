@@ -1,0 +1,21 @@
+<head>
+    <title>test_much_recursion</title>
+</head>
+
+<body>
+<h1>test_much_recursion</h1>
+
+recursion = <input type="number" value="{{recursions}}"><br>
+
+{{> list item=item}}
+</body>
+<template name="list">
+    {{#with item}}
+        {{>item this}}
+    {{/with}}
+</template>
+
+<template name="item">
+        item number: {{number}}<br>
+    {{>list item=this.item}}
+</template>
