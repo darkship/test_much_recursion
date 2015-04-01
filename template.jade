@@ -1,0 +1,8 @@
+template(name="list_jade")
+  if item
+    +item_jade item
+
+
+template(name="item_jade")
+  item number: #{number}<br>
+  +item_jade (item=item)
