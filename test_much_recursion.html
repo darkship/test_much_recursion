@@ -8,11 +8,15 @@
 recursion = <input type="number" value="{{recursions}}"><br>
 
 {{> list item=item}}
+
+
+
 </body>
+
 <template name="list">
-    {{#with item}}
-        {{>item this}}
-    {{/with}}
+    {{#if item}}
+        {{>item item}}
+    {{/if}}
 </template>
 
 <template name="item">

@@ -37,7 +37,3 @@ Template.body.helpers({
 
     }
 })
-
-
-
-
